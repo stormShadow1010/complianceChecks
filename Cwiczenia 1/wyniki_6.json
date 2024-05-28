@@ -1,0 +1,28 @@
+[
+  {
+    "_id": {"$oid": "61df2558b90ff75376297d18"},
+    "birth_date": {"$date": "1999-08-09T04:00:00.000Z"},
+    "credit": {
+      "balance": "100",
+      "currency": "PLN",
+      "number": "0000000000000000",
+      "type": "visa-electron"
+    },
+    "description": "to ja",
+    "email": "s17191@pjwstk.edu.pl",
+    "first_name": "Paweł",
+    "height": "180",
+    "job": "Student",
+    "last_name": "Machowiec",
+    "location": {
+      "address": {
+        "streetname": "Marszałkowska",
+        "streetnumber": "1"
+      },
+      "city": "Warsaw"
+    },
+    "nationality": "Poland",
+    "sex": "Male",
+    "weight": "78"
+  }
+]
