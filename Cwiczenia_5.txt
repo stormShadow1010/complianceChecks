@@ -1,0 +1,221 @@
+Zadanie 1
+
+curl -i -XPUT -H "Content-Type:application/json" -d '{"ENAME":"KING","JOB":"PRESIDENT","SAL":"5000","DEPTNO":"10"}' http://localhost:8098/buckets/s17191/keys/7839
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:22:52 GMT
+Content-Type: application/json
+Content-Length: 0
+
+curl -i -XPUT -H "Content-Type:application/json" -d '{"ENAME":"BLAKE","JOB":"MANAGER","SAL":"2850","DEPTNO":"30"}' http://localhost:8098/buckets/s17191/keys/7698
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:27:13 GMT
+Content-Type: application/json
+Content-Length: 0
+
+
+curl -i -XPUT -H "Content-Type:application/json" -d '{"ENAME":"CLARK","JOB":"MANAGER","SAL":"2450","DEPTNO":"10"}' http://localhost:8098/buckets/s17191/keys/7782
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:28:15 GMT
+Content-Type: application/json
+Content-Length: 0
+
+
+curl -i -XPUT -H "Content-Type:application/json" -d '{"ENAME":"JONES","JOB":"MANAGER","SAL":"2975","DEPTNO":"20"}' http://localhost:8098/buckets/s17191/keys/7566
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:29:12 GMT
+Content-Type: application/json
+Content-Length: 0
+
+
+curl -i -XPUT -H "Content-Type:application/json" -d '{"ENAME":"MARTIN","JOB":"SALESMAN","SAL":"1250","DEPTNO":"30"}' http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:30:03 GMT
+Content-Type: application/json
+Content-Length: 0
+
+Zadanie 2
+
+curl -i http://localhost:8098/buckets/s17191/keys/7839
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvm9LkH8LEUpkyWNlmGMRfpsvCwA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s17191>; rel="up"
+Last-Modified: Sat, 15 Jan 2022 12:22:52 GMT
+ETag: "HeegtEFi8YGY3rY1Ok0ot"
+Date: Sat, 15 Jan 2022 12:33:36 GMT
+Content-Type: application/json
+Content-Length: 47
+
+'{ENAME:KING,JOB:PRESIDENT,SAL:5000,DEPTNO:10}'
+
+Zadanie 3
+
+curl -i -XPUT -H "Content-Type:application/json" -d '{"ENAME":"MARTIN","JOB":"SALESMAN","SAL":"1250","COMM":"1400","DEPTNO":"30"}' http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:34:58 GMT
+Content-Type: application/json
+Content-Length: 0
+
+
+curl -i http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvm9LkLWDCCUy5bEyFFmH3+bLAgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s17191>; rel="up"
+Last-Modified: Sat, 15 Jan 2022 12:34:58 GMT
+ETag: "5mguaTJF42fLmeX4oLHj3n"
+Date: Sat, 15 Jan 2022 12:35:21 GMT
+Content-Type: application/json
+Content-Length: 58
+
+'{ENAME:MARTIN,JOB:SALESMAN,SAL:1250,COMM:1400,DEPTNO:30}'
+
+Zadanie 4
+
+curl -i -XPUT -H "Content-Type:application/json" -d '{"ENAME":"MARTIN","JOB":"SALESMAN","SAL":"1250","DEPTNO":"30"}' http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:36:24 GMT
+Content-Type: application/json
+Content-Length: 0
+
+
+curl -i http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvm9LkLWDCCUy57EynLAOv82XBQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s17191>; rel="up"
+Last-Modified: Sat, 15 Jan 2022 12:36:24 GMT
+ETag: "4eaRI6Ysfof3f2yJvY5iBT"
+Date: Sat, 15 Jan 2022 12:36:27 GMT
+Content-Type: application/json
+Content-Length: 48
+
+'{ENAME:MARTIN,JOB:SALESMAN,SAL:1250,DEPTNO:30}'
+
+Zadanie 5
+
+curl -i -XPUT -H "Content-Type:application/json" -d '{"ENAME":"MARTIN","JOB":"SALESMAN","SAL":"1000","COMM":"1400","DEPTNO":"30"}' http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:38:16 GMT
+Content-Type: application/json
+Content-Length: 0
+
+
+curl -i http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvm9LkLWDCCWy5LEyWNiE3+bLAgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s17191>; rel="up"
+Last-Modified: Sat, 15 Jan 2022 12:38:16 GMT
+ETag: "3BbkAllEDsKBrgzT7fPJ3l"
+Date: Sat, 15 Jan 2022 12:38:31 GMT
+Content-Type: application/json
+Content-Length: 58
+
+'{ENAME:MARTIN,JOB:SALESMAN,SAL:1000,COMM:1400,DEPTNO:30}'
+
+Zadanie 6
+
+curl -i -XDELETE http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:39:59 GMT
+Content-Type: application/json
+Content-Length: 0
+
+Zadanie 7
+
+curl -i http://localhost:8098/buckets/s17191/keys/7654
+
+HTTP/1.1 404 Object Not Found
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:40:59 GMT
+Content-Type: text/plain
+Content-Length: 10
+
+not found
+
+Zadanie 8
+
+curl -i -XPOST -H "Content-Type:application/json" -d '{"ENAME":"ALLEN"}' http://localhost:8098/buckets/s17191/keys
+
+HTTP/1.1 201 Created
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Location: /buckets/s17191/keys/Hbvi62iYjFmuBPJa29cayt7pJRt
+Date: Sat, 15 Jan 2022 12:47:29 GMT
+Content-Type: application/json
+Content-Length: 0
+
+Zadanie 9
+
+curl -i http://localhost:8098/buckets/s17191/keys/Hbvi62iYjFmuBPJa29cayt7pJRt
+
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvm9LUNAFspkymBIZ81gZEu3Cb/NlAQA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s17191>; rel="up"
+Last-Modified: Sat, 15 Jan 2022 12:47:29 GMT
+ETag: "2O7BnD7s4QoYtI3lGL9vVs"
+Date: Sat, 15 Jan 2022 12:48:21 GMT
+Content-Type: application/json
+Content-Length: 15
+
+'{ENAME:ALLEN}'
+
+Zadanie 10
+
+curl -i -XDELETE http://localhost:8098/buckets/s17191/keys/Hbvi62iYjFmuBPJa29cayt7pJRt
+
+HTTP/1.1 204 No Content
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:49:01 GMT
+Content-Type: application/json
+Content-Length: 0
+
+
+curl -i http://localhost:8098/buckets/s17191/keys/Hbvi62iYjFmuBPJa29cayt7pJRt
+
+HTTP/1.1 404 Object Not Found
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Date: Sat, 15 Jan 2022 12:49:18 GMT
+Content-Type: text/plain
+Content-Length: 10
+
+not found
